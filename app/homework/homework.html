@@ -1,0 +1,28 @@
+<div id="baseDiv">
+    <h2>My Shopping List</h2>
+
+    <!--Search-->
+    <div>
+        <input type="text" ng-model="keyword" placeholder="search items ..." ng-disabled="disabled()">
+        <button ng-click="orderByDate()" ng-disabled="disabled()">order</button>
+    </div>
+
+    <!--Content-->
+    <div ng-if="shoppingList">
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-action list-group-item-success"
+                ng-repeat="item in shoppingList | filter:keyword | orderBy:shoppingDate:reverse">
+                <p>
+                    {{item.itemName}} - {{item.shoppingDate | date :dateFormat}}
+                    <span ng-click="delete(item)">X</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+
+    <!--Add Item-->
+    <div>
+        <input type="text" ng-model="itemName" placeholder="Add shopping item here ...">
+        <button ng-click="addItem()">Add</button>
+    </div>
+</div>

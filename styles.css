@@ -1,0 +1,22 @@
+#baseDiv {
+    margin-left: auto;
+    margin-right: auto;
+    width: 265px;
+    background-color: lightyellow
+}
+
+ul {
+    overflow: auto;
+    width: 264px;
+    height: 282px;
+}
+
+button {
+    background-color: green;
+    color: white;
+}
+
+span {
+    float: right;
+    background-color: #dff0d8
+}
