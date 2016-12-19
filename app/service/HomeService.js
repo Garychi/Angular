@@ -11,7 +11,7 @@ define(['app'],function (app) {
 
         HomeService.prototype.printData = function () {
             return "service success";
-        }
+        };
 
         return HomeService;
     })()]);

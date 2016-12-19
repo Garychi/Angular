@@ -10,8 +10,6 @@ define(["HomeService"], function () {
         $scope.dateFormat = "yyyy/MM/dd HH:mm:ss";
 
         $scope.addItem = function () {
-             console.log(homeService.printData());
-
             if ($scope.itemName) {
                 var duplicated = false;
 
@@ -39,8 +37,9 @@ define(["HomeService"], function () {
 
         $scope.disabled = function () {
             return $scope.shoppingList.length < 1 ? true : false;
-        }
+        };
 
+        console.log(homeService.printData());
     }];
 });
 

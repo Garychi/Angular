@@ -10,7 +10,7 @@
     <!--Content-->
     <div ng-if="shoppingList">
         <ul class="list-group">
-            <li class="list-group-item list-group-item-action list-group-item-success"
+            <li class="list-group-item"
                 ng-repeat="item in shoppingList | filter:keyword | orderBy:shoppingDate:reverse">
                 <p>
                     {{item.itemName}} - {{item.shoppingDate | date :dateFormat}}
