@@ -33,7 +33,7 @@ define(["HomeService"], function () {
 
         $scope.orderByDate = function () {
             $scope.reverse = !$scope.reverse;
-        }
+        };
 
         $scope.disabled = function () {
             return $scope.shoppingList.length < 1 ? true : false;
