@@ -8,22 +8,27 @@ define(["HomeService"], function () {
         $scope.shoppingList = [];
         $scope.reverse = true;
         $scope.dateFormat = "yyyy/MM/dd HH:mm:ss";
-
+        $scope.errorMessage="";
         $scope.addItem = function () {
             if ($scope.itemName) {
                 var duplicated = false;
 
                 for (var item in $scope.shoppingList) {
                     if ($scope.shoppingList[item].itemName === $scope.itemName) {
-                        alert($scope.itemName + '已存在');
+                        $scope.errorMessage=$scope.itemName + '已存在';
+                        // alert($scope.itemName + '已存在');
                         duplicated = true;
                         break;
                     }
                 }
 
                 if (!duplicated) {
+                    $scope.errorMessage="";
                     $scope.shoppingList.push({"itemName": $scope.itemName, "shoppingDate": new Date()});
                 }
+            }
+            else{
+                $scope.errorMessage="item name can't be empty";
             }
         };
 
