@@ -1,4 +1,4 @@
-<div id="baseDiv">
+<div class="baseDiv">
     <div class="titleDiv">
         <h2>My Shopping List</h2>
     </div>
@@ -20,21 +20,19 @@
                 <label class="myDateLabel redButtonHover">
                     {{item.shoppingDate | date :dateFormat}}
                 </label>
-                <!--<label class="deleteLbl">-->
                 <span class="redButton" ng-click="delete(item)">x</span>
-                <!--</label>-->
             </li>
         </ul>
     </div>
 
     <!--Add Item-->
-    <div class="addDiv errMsgDiv">
+    <div class="addDiv">
         <div>
             <label ng-bind="errorMessage"></label>
         </div>
-        <div class ="mydiv inputDiv">
+        <div class="inputDiv">
             <input type="text" ng-model="itemName" placeholder="Add shopping item here ...">
-            <button class="addBtn"ng-click="addItem()">Add</button>
+            <button class="addBtn" ng-click="addItem()">Add</button>
         </div>
     </div>
 </div>
